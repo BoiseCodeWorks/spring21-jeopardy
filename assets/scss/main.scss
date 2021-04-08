@@ -1,0 +1,41 @@
+@import "./_variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./_overrides.scss";
+@import "./custom.scss";
+@import "./loaders.scss";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $body-bg;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.hover-action:hover{
+  background-color: rgb(196, 196, 29);
+  cursor:pointer
+}
+
+.text-yellow {
+  color: rgb(221, 221, 43)
+}
+
+
+.answer {
+  color: transparent;
+  transition: all 1s;
+  animation: fadeIn ease 2s;
+}
+
+.question:hover .answer {
+  color: unset
+}
+
+  @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
